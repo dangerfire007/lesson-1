@@ -3,20 +3,32 @@
 }
 #main {
 	width: 1050px;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 0 auto;
 
 }
 
+#main a {
+	text-decoration: none;
+}
+
 body {
+	width: 100%;
 	background: #f8f4f4;
 	font-size: .8em;
 	font-family: "Open Sans", Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+.header {
+	background: #000000;
+
 }
 
 .nav {
 	list-style: none;
-	padding: 0;
+	width: 80%;
 }
 .nav li a {
 	cursor: pointer;
@@ -27,6 +39,10 @@ body {
 
 	transition: all;
 	transition-duration: .5s;
+}
+
+.nav li a:hover {
+	background: #e1dede;
 }
 
 .startup-job {
@@ -47,31 +63,50 @@ body {
 	float: left;
 }	
 .more {
+	position: relative;
 	width: 95px;
 	height: 50px;
 	float: left;
 }
 
-.nav li :hover {
-	background: #c3c2c2;
+.header li ul {
+	position: absolute;
+	z-index: 20;
+	padding-bottom: 10px;
+	top: 100%;
+	left: -50%;
+	display: none;
 }
 
-.header li ul {
-	width: 150px;
-	height: 150px;
-	border: 1px solid #8e8686; 
-	border-radius: 5px;
+.menu {
+	padding: 0;
+	margin: 0;
+	width: 200px;
 	background: #ffffff;
-	position: absolute;
-	top: 65px;
-	left: 662px;
+	border-radius: 5px;
+	list-style: none;
 }
+
+.menu li {
+	list-style: none;
+}
+
 .menu a {
-	height: 20px;
-	width: 150px;
-	background: #9b1919;
-	padding: 2px;
-	min-width: 150;
+	/*height: 25px;*/
+	min-width: 200px;
+	float: left;
+	line-height: 1px;
+}
+
+.menu a:first-child {
+	margin-top: -10px;
+}
+.menu a:hover {
+	background: #6a6969;
+}
+
+.header li:hover ul{
+	display: block;
 }
 
 .background {
@@ -82,6 +117,7 @@ body {
 	margin-right: -426px;
 	margin-left: -430px;
 }
+
 .logo {
 	background: url(https://assets.angel.co/assets/static_pages/logo/AngelList_White_Lockup-5a55c9c4f4cac441f745ea327edb689d4c5829575bcc4e1cf8b1db62e36bf630.png);
 	width: 320px;
@@ -92,6 +128,7 @@ body {
 	background-color: #000000;
 	background-repeat: no-repeat;
 }
+
 .logotipe {
 	background: url(1.png);
 	background-repeat: no-repeat;
@@ -100,6 +137,7 @@ body {
 	background-size: 70%;
 	
 	position: relative;
+	left: 5px;
 	float: left;
 }
 
@@ -152,11 +190,12 @@ body {
 	width: 300px;
 	height: 160px;
 	background-color: #292929;
+	margin: 0 auto;
 }
 
 .table p {
 	padding: 15px;
-	margin: 0;
+	margin: 0 auto;
 	border: 1px solid #6c6b6b;
 
 	transition: all;
@@ -165,6 +204,7 @@ body {
 
 .table p:hover {
 	background-color: #474646;
+	cursor: pointer;
 }
 .footer {
 	position: relative;
@@ -243,6 +283,110 @@ body {
 	border: 4px solid #dbdbdc;
 	border-radius: 5px;
 }
+
 .ico img:hover {
 	cursor: pointer;
+}
+
+@media only screen and (max-width: 950px) {
+	body {
+		overflow-x: hidden;
+		width: 125%;
+	}
+
+	#main {
+		width: 550px;
+		margin: 0 auto;
+	}
+    
+    .background {
+		height: 500px;
+	}
+    
+    .logo {
+		position: relative;
+		left: 50px;
+		margin-top: -245px;
+	}
+    
+    .texts {
+		position: relative;
+		top: 50%;
+	}
+    
+    .text1 {
+		font-size: 1em;
+		margin-top: -210px;
+		margin-left: 130px;
+	}
+    
+    .text2 {
+		font-size: 2em;
+		margin-top: -160px;
+		margin-left: 115px;
+	}
+    
+    .text3 {
+		font-size: 30px;
+		margin-top: -120px;
+		margin-left: 40px;
+	}
+    
+    .text4 {
+		font-size: 1.5em;
+		margin-top: 60px;
+		margin-left: 150px;
+	}
+    
+    .right {
+		margin-left: -164px;
+		margin-top: 300px;
+		width: 380px;
+	}
+    
+    .table {
+		text-align: center;
+	}
+    
+    .footer {
+		position: relative;
+		width: 550px;
+		text-align: center;
+		top: 220px;
+		left: -180px;
+	}
+    .top2 {
+		font-size: 30px;
+	}
+    .bottom2 {
+		font-size: 13px;
+	}
+    .bottom3 {
+		font-size: 13px;
+	}
+    .button1 {
+		position: relative;
+		top: -330px;
+		left: 215px;
+		width: 350px;
+		float: left;
+	}
+    .button2 {
+		position: relative;
+		top: -320px;
+		left: 210px;
+		width: 350px;
+		float: left;
+	}
+    .ico {
+		position: relative;
+		top: -280px;
+		left: 120px;
+		width: 400px;
+		display: inline-block;
+	}
+    .ico img {
+		margin: 50px;
+		float: left;
+	}
 }
